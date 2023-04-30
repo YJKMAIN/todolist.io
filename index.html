@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+    <div id="section1">
+            <h1 id="title_container">
+                <span></span>&nbsp
+                <span id="clock"></span>
+            </h1>
+            <div id="Dday" class="section">
+                <p>before leaving the company</p>
+                <span></span>
+            </div><!--디데이-->
+            <div id="weather" class="section">
+                    <span>weather</span>
+                    <span></span>
+            </div><!--날씨-->
+            <div id="quote_container" class="section">
+                <div id="quote">
+                </div>
+                <div id="BG_box">
+                </div>
+            </div>
+    </div>
+
+    <div id="section2" class="section">
+        <h3>Things to do when I'm out of work</h3>
+        <form id="bucket-form">
+            <input type="text" placeholder="Write your dream">
+        </form>
+        
+        <ul id="bucket-list"></ul>
+    </div>
+
+    <div id="contents">
+        <h4>Things to do to quit</h4>
+        <form id="todo-form">
+            <input type="text" placeholder="Write Things to do to quit!!!!!!!!!!!!">
+        </form>
+        
+        <ul id="todo-list"></ul>
+    </div>
+</div><!--container end-->
+
+
+
+<form id="login-form" class="hidden">
+        <p>what's your name??</p>
+        <input required maxlength="15" type="text" placeholder="write your name" />
+        <input type="submit" value="logIn" />
+</form>
+<div id="login-bg"></div>
+    
+
+
+    <script src="js/greeting.js"></script>
+    <script src="js/dday.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/bucket.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
+
+/*reset*/
+*{margin:0; padding:0; box-sizing: border-box;}
+li{list-style: none;}
+body{ 
+	/*font-size:16px;*/
+    font-family: 'Cormorant', serif;
+    font-weight:300; 
+	background:url("../img/BG.jpg");
+}
+
+.hidden{
+    display:none;
+}
+
+/*로그인폼*/
+#login-bg{
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index:800;
+}
+
+#login-form{
+    position:absolute;
+    width:500px; height:300px;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    color:#ffffff;
+    z-index:900;
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+}
+
+#login-form p{
+    width:100%;
+    text-align:center;
+    font-size: 50px;
+    display:block;
+    margin-bottom:20px;
+}
+
+#login-form input{
+    display:block;
+    text-align: center;
+    width:100%;
+    height:40px;
+    border:none;
+    border-radius:5px;
+    margin:5px 0;
+}
+
+#login-form input:last-child:hover{
+    background:#3064ff;
+    color:#fff;
+}
+
+
+/*container*/
+#container{
+    display:grid;
+    width:90vw;
+    margin:5vh 5vw;
+    height:90vh;
+    grid-gap:10px;
+    grid-template-columns:1fr 1fr 1fr;
+}
+
+.section{
+    width:100%;
+    background:rgba(255,255,255,0.4);
+    border-radius:5px;    
+}
+
+/*section1*/
+#section1{
+    display:grid;
+    grid-template-rows: 0.7fr 1.5fr 0.5fr 4fr;
+    grid-gap:10px;
+}
+
+#title_container{
+    font-size: 28px;
+    text-align:center;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+}
+
+
+#Dday p{
+    font-size: 18px;
+    text-align:center;
+    margin:15px 0;
+}
+#Dday span{
+    font-size: 50px;
+    display:block;
+    text-align:center;
+    font-family: 'NanumSquareNeo-Variable';
+}
+#weather{
+    font-size:18px;
+	text-align: center;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+}
+
+#quote_container{
+    position:relative;
+}
+
+#quote{
+    display:block;
+    color:#fff;
+    text-align: center;
+    font-style:italic;
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+    font-family: 'NanumSquareNeo-Variable';
+    z-index:9999;
+}
+#BG_box::before{
+    content:'';
+    position:absolute;
+    top:0%; left:0%;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:30;
+}
+#BG_box{
+    width:100%;
+}
+
+/*todolist*/
+#contents, #section2{
+    width:100%;
+    background:rgba(255,255,255,0.6);
+    border-radius: 5px;
+}
+
+#contents h4, #section2 h3{
+    display:block;
+    font-size: 30px;
+    text-align:center;
+    margin:10px 0;
+}
+
+#todo-form input,#bucket-form input{
+    display:block;
+    text-align: center;
+    margin:0 auto 10px auto;
+    width:100%; height:40px;
+    border:none;
+    border-radius:5px
+}
+
+#todo-list,#bucket-list{
+    display:block;
+    text-align: center;
+    margin:0 auto;
+    width:80%;
+}
+
+#todo-list li,#bucket-list li{
+    text-align:left;
+    list-style:none;
+    line-height:35px;
+}
+
+#todo-list li button,#bucket-list li button{
+    width:30px; height:20px;
+    text-align:center;
+    margin-right:8px;
+    border:none;
+    background:#fff;
+    border-radius:3px;
+}
+
+#todo-list li span,#bucket-list li span{
+    height:1em;
+    font-family: 'NanumSquareNeo-Variable';
+    font-weight:light;
+}
+
+
+@media (max-width: 768px){ /*600px보다 작은 화면일때*/
+    #container{
+        display:grid;
+        width:94%;
+        height:100%;
+        margin:30px 3%;
+        grid-template-columns:none;
+    }
+    #section1, #title_container, #Dday, #weather, #quote_container,#section2,#contents{
+        width:100%;
+    }
+}
